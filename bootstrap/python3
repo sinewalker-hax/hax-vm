@@ -1,0 +1,9 @@
+#-*- mode:shell -*-
+
+sudo zypper --quiet install -y python3
+sudo zypper --quiet install -y python3-pip
+sudo zypper --quiet install -y python3-devel
+sudo zypper --quiet install -y python3-virtualenv
+sudo zypper --quiet install -y python3-virtualenv-doc
+sudo pip3 install --upgrade pip
+

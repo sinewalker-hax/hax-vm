@@ -1,10 +1,5 @@
-#!/bin/bash
+#-*- mode:shell -*-
 # bootstrap nikola and required packages
-
-sudo zypper --quiet install -y python3
-sudo zypper --quiet install -y python3-pip
-sudo zypper --quiet install -y python3-devel
-sudo zypper --quiet install -y virtualenv3
 
 sudo zypper --quiet install -y nodejs
 #sudo zypper --quiet install -y libxml-devel
@@ -16,5 +11,4 @@ if ! [ -L /home/vagrant/blog ]; then
     ln -s /hax/blog /home/vagrant/blog
 fi
 
-sudo pip3 install --upgrade pip
 #sudo pip3 install -r /home/vagrant/blog/notes/requirements.txt

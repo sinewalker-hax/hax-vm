@@ -1,0 +1,5 @@
+#-*- mode:sh -*-
+
+export github_user=sinewalker
+
+sudo -u vagrant bash -c "$(curl -fsSL https://raw.github.com/$github_user/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
