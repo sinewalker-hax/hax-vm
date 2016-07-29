@@ -1,4 +1,4 @@
-#-*- mode:shell -*-
+#-*- mode:sh -*-
 # bootstrap nikola and required packages
 
 sudo zypper --quiet install -y nodejs

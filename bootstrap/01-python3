@@ -1,4 +1,4 @@
-#-*- mode:shell -*-
+#-*- mode:sh -*-
 
 sudo zypper --quiet install -y python3
 sudo zypper --quiet install -y python3-pip

@@ -1,4 +1,3 @@
-#-*- mode:shell -*-
-
-sudo zypper --quiet install -y atop
+#-*- mode:sh -*-
+sudo zypper --quiet update -y
 sudo zypper --quiet install -y htop

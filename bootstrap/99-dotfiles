@@ -1,7 +1,10 @@
 #-*- mode:sh -*-
 
+sudo zypper --quiet install -y ruby
+
 if ! [ -d /home/vagrant/.dotfiles ]; then
     export github_user=sinewalker
 
     sudo -u vagrant bash -c "$(curl -fsSL https://raw.github.com/$github_user/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
+    find /home/vagrant/.dotfiles/backups -name authorized_keys -exec cp -p {} /home/vagrant/.ssh \;
 fi
