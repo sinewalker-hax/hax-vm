@@ -1,0 +1,3 @@
+#-*- mode:shell -*-
+
+sudo zypper --quiet install -y libopenssl-devel
