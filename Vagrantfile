@@ -14,6 +14,9 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "opensuse/openSUSE-42.1-x86_64"
 
+  #MJL20160729 set hostname
+  config.vm.hostname = "hax-vm"
+
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
