@@ -1,5 +1,7 @@
 #-*- mode:sh -*-
 
-export github_user=sinewalker
+if ! [ -d /home/vagrant/.dotfiles ]; then
+    export github_user=sinewalker
 
-sudo -u vagrant bash -c "$(curl -fsSL https://raw.github.com/$github_user/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
+    sudo -u vagrant bash -c "$(curl -fsSL https://raw.github.com/$github_user/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
+fi
