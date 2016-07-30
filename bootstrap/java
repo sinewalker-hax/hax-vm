@@ -1,0 +1,11 @@
+#-*- mode:sh -*-
+source /vagrant/bootstrap/00-defs
+
+banner java
+
+#zyp pattern:devel_java  # too much!
+
+zyp ant
+zyp ant-junit
+zyp java
+zyp log4j

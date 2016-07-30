@@ -1,0 +1,8 @@
+#-*- mode:sh -*-
+source /vagrant/bootstrap/00-defs
+
+banner nodejs
+
+zyp nodejs
+zyp npm
+zyp perl-JavaScript-Minifier-XS
