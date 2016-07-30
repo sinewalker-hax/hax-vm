@@ -1,0 +1,17 @@
+#-*- mode:sh -*-
+source /vagrant/bootstrap/00-defs
+
+banner network
+
+zyp arpwatch
+zyp iftop
+zyp mtr
+zyp tcpdump
+zyp ncat
+zyp whois
+zyp openssl
+zyp python3-pyOpenSSL
+zyp python3-pycurl
+zyp nginx
+
+#TODO fuse and the web/proxy log viewer thing
