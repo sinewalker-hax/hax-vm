@@ -1,14 +1,27 @@
 #-*- mode:sh -*-
-# bootstrap nikola and required packages
+source /vagrant/bootstrap/00-defs
+source /vagrant/bootstrap/nodejs
 
-sudo zypper --quiet install -y nodejs
-#sudo zypper --quiet install -y libxml-devel
-sudo zypper --quiet install -y libxml2-devel
-sudo zypper --quiet install -y libxslt-devel
+banner nikola
 
-if ! [ -L /home/vagrant/blog ]; then
-    rm -rf /home/vagrant/blog
-    ln -s /hax/blog /home/vagrant/blog
+zyp libxml2-devel
+zyp libxslt-devel
+zyp zlib-devel
+#zyp builddep
+zyp python3-lxml
+zyp python3-Pillow
+
+if ! [ -d /home/vagrant/nikola ]; then
+    pushd /home/vagrant
+    virtualenv-3.4 nikola
+    cd nikola
+    source bin/activate
+    pip install --upgrade pip
+    pip install --upgrade "Nikola[extras]"
+    deactivate
+    popd
 fi
+
+[ -L /home/vagrant//blog ] || ln -s /hax/blog /home/vagant/blog
 
 #sudo pip3 install -r /home/vagrant/blog/notes/requirements.txt

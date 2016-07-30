@@ -10,17 +10,18 @@ Vagrant.configure(2) do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
+  #MJL20160730 set hostname and VM name
+  config.vm.hostname = "hax"
+  config.vm.define :hax
+
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "opensuse/openSUSE-42.1-x86_64"
 
-  #MJL20160729 set hostname
-  config.vm.hostname = "hax-vm"
-
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
-  # config.vm.box_check_update = false
+  config.vm.box_check_update = false
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -67,8 +68,9 @@ Vagrant.configure(2) do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
+  #MJL20160730 source files in bootstrap/ beginning with a number.
   config.vm.provision "shell", inline: <<-SHELL
-     for file in /vagrant/bootstrap/*; do
+     for file in /vagrant/bootstrap/[0-9]*; do
          source "${file}"
      done
   SHELL

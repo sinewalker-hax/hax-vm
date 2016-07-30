@@ -1,3 +1,4 @@
 #-*- mode:sh -*-
-
-sudo zypper --quiet install -y libopenssl-devel
+banner 01-devel
+zyp pattern:devel_basis
+zyp libopenssl-devel

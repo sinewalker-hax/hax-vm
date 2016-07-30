@@ -1,9 +1,12 @@
 #-*- mode:sh -*-
+banner 01-python
 
-sudo zypper --quiet install -y python3
-sudo zypper --quiet install -y python3-pip
-sudo zypper --quiet install -y python3-devel
-sudo zypper --quiet install -y python3-virtualenv
-sudo zypper --quiet install -y python3-virtualenv-doc
+zyp pattern:devel_python3
+zyp python3-virtualenv
+zyp python3-virtualenv-doc
+zyp python-devel
+zyp pychecker
+
+zyp python3-pip
 sudo pip3 install --upgrade pip
 

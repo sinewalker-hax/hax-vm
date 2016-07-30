@@ -1,3 +1,8 @@
 #-*- mode:sh -*-
-sudo zypper --quiet update -y
-sudo zypper --quiet install -y htop
+banner 00-linux
+
+zyp pattern:console
+zyp htop
+zyp nano
+zyp screen
+zyp tmux
