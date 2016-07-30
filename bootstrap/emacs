@@ -1,0 +1,14 @@
+#-*- mode:sh -*-
+source /vagrant/bootstrap/00-defs
+
+banner emacs/spacemacs
+
+zyp emacs
+
+echo 'spacemacs'
+rm -rf ~/.emacs ~/.emacs.d
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+echo 'dotspacemacs (HTTPS)'
+#note: HTTPS means won't be able to push back without a password
+[ -d ~/.spacemacs.d ] || git clone https://github.com/sinewalker/dotspacemacs.git ~/.spacemacs.d
