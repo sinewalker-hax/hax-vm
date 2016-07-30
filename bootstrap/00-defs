@@ -1,0 +1,13 @@
+#-*- mode:sh -*-
+# functions used by the bootstrap sources
+
+function banner() {
+    echo ------------------------------------------------------------
+    echo $1
+    echo ------------------------------------------------------------
+    echo
+}
+function zyp() {
+    echo -n $1
+    sudo zypper --quiet install -y $1
+}
