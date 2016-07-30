@@ -1,0 +1,17 @@
+#-*- mode:sh -*-
+source /vagrant/bootstrap/00-defs
+source /vagrant/bootstrap/java
+
+banner clojure
+
+echo lein
+LEININGEN=/home/vagrant/bin/lein
+
+if ! [ -x $LEININGEN ]; then
+    curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein > $LEININGEN
+    chown vagrant:users $LEININGEN
+    chmod +x $LEININGEN
+    source $LEININGEN
+fi
+
+#there is also Boot instead of or as well as Leiningen... I don't know it yet
