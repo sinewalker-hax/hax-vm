@@ -1,0 +1,15 @@
+#-*- mode:sh -*-
+source /vagrant/bootstrap/00-defs
+
+banner database
+
+zyp sqlite3
+zyp sqlite3-doc
+
+zyp postgresql-server
+zyp postgresql-plpython
+zyp postgresql-jdbc
+
+zyp PyGreSQL
+zyp python3-SQLAlchemy
+zyp python-pysqlite
