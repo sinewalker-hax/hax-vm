@@ -9,6 +9,12 @@ echo 'spacemacs'
 rm -rf ~/.emacs ~/.emacs.d
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
-echo 'dotspacemacs (HTTPS)'
-#note: HTTPS means won't be able to push back without a password
-[ -d ~/.spacemacs.d ] || git clone https://github.com/sinewalker/dotspacemacs.git ~/.spacemacs.d
+echo 'dotspacemacs'
+
+#note: first, try to clone using SSH. Needs vagrant config.ssh.forward_agent to
+#      be true and github key on the host's keychain
+
+[ -d ~/.spacemacs.d ] || git clone git@github.com:sinewalker/dotspacemacs.git ~/.spacemacs.d
+
+# if that didn't work, use HTTPS, which means push will need a password later
+[ -f ~/.spacemacs.d/init.el ] || git clone https://github.com/sinewalker/dotspacemacs.git ~/.spacemacs.d
