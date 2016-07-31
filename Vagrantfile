@@ -34,6 +34,8 @@ Vagrant.configure(2) do |config|
   config.vm.network "forwarded_port", guest: 8888, host: 42888  #user C
   config.vm.network "forwarded_port", guest: 2222, host: 42222  #user D
 
+  config.ssh.forward_agent = true
+  config.ssh.forward_x11 = true
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
