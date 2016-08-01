@@ -23,6 +23,6 @@ if ! [ -d /home/vagrant/lib/nikola ]; then
     popd
 fi
 
-[ -L /home/vagrant/blog ] || ln -s /hax/blog /home/vagant/blog
+[ -L /home/vagrant/blog ] || ln -s /hax/blog /home/vagrant/blog
 
 #sudo pip3 install -r /home/vagrant/blog/notes/requirements.txt
