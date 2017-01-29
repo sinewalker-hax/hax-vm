@@ -10,7 +10,7 @@ install, by sourcing them, for example:
 
 > source /vagrant/bootstrap/database
 
-this would source (and execute) code to install networking packages. You only
+this would source (and execute) code to install database packages. You only
 need to do this once when bringing up a new virtual machine. The point being
 these non-numbered files contain common package groups which I don't necessarily
 always want to install.
