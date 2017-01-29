@@ -14,4 +14,5 @@ zyp python3-pyOpenSSL
 zyp python3-pycurl
 zyp nginx
 
+sudo pip install httpie
 #TODO fuse and the web/proxy log viewer thing
